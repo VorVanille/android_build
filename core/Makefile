@@ -2450,12 +2450,6 @@ vanilla: otapackage
 
 bacon: vanilla
 
-bootzip: bootimage
-	   $(BOOT_ZIP_FROM_IMAGE_SCRIPT) \
-	   $(recovery_fstab) \
-	   $(OUT) \
-	   $(TARGET_DEVICE)
-
 endif    # build_ota_package
 
 # -----------------------------------------------------------------
