@@ -4,15 +4,14 @@ print_build_config_vars := \
   PLATFORM_VERSION \
   ROM_NAME \
   ROM_VERSION \
+  BUILD_ID \
   TARGET_PRODUCT \
   TARGET_BUILD_VARIANT \
   TARGET_BUILD_APPS \
   TARGET_ARCH \
   TARGET_ARCH_VARIANT \
   TARGET_CPU_VARIANT \
-  BUILD_ID \
-  OUT_DIR \
-  AUX_OS_VARIANT_LIST
+  OUT_DIR
 
 ifeq ($(TARGET_BUILD_PDK),true)
 print_build_config_vars += \
@@ -84,9 +83,9 @@ endif
 
 ifneq ($(filter report_config,$(DUMP_MANY_VARS)),)
 # Construct the shell commands that print the config banner.
-report_config_sh := echo '============================================';
+report_config_sh := echo '===============================';
 report_config_sh += $(foreach v,$(print_build_config_vars),echo '$v=$($(v))';)
-report_config_sh += echo '============================================';
+report_config_sh += echo '===============================';
 endif
 
 # Dump mulitple variables to "<var>=<value>" pairs, one per line.
