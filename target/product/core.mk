@@ -38,6 +38,7 @@ PRODUCT_PACKAGES += \
     MtpDocumentsProvider \
     PicoTts \
     PacProcessor \
+    Launcher3 \
     libpac \
     PrintSpooler \
     PrintRecommendationService \
